@@ -52,9 +52,15 @@ So we use the Numerical~Cat helper file
 boxplot(WORDSUM~DEGREE,data=GSS)
 ```
 
+Based on the boxplot, there is no big discrpencies in the wordsum scores based on degree.
+
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+favstats(WORDSUM~DEGREE,data=GSS)
+```
 
 ## Inferential Results
 
