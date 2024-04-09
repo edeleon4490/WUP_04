@@ -24,6 +24,7 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 
 # Methods
 
+The numerical variable is the average score in the WORDSUM test and the categorical variable is the level 
 <!--Mention that you intend to use chatGPT to the greatest extent possible. Give credit to chatGPT when you use it to create code in your report. Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
 We want to predict the WORDSUM scores based on DEGREE.
@@ -52,7 +53,7 @@ So we use the Numerical~Cat helper file
 boxplot(WORDSUM~DEGREE,data=GSS)
 ```
 
-Based on the boxplot, there is no big discrpencies in the wordsum scores based on degree.
+Based on the boxplot, there are differences in the median values between every degree with LT HIGH SCHOOL being the lowest with a median value of 8 compared to the average score in the WORDSUM test in the GRADUATE with a median of 11.
 
 ### Numerical Descriptive Results
 
@@ -78,6 +79,11 @@ model1 <- aov(WORDSUM~DEGREE,data=GSS)
 summary.aov(model1)
 ```
 
+Since the p-value is 0.000236, which is less than 0.05, there is evidence this is statistically significant.
+
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+Our question is whether thre is any difference in between average score in the WORDSUM test and the level of scoring based on DEGREE. According to the boxplot, the median values differed with the lowest being LT HIGH SCHOOL and the highest being GRADUATE. Based on the numerical description graph, it further proves that WORDSUM score medians increase as the DEGREE level increases. Furthermore, the p-value of 0.000236 is less than 0.05. Therefore we can reject the $H_0$ and demonstate that there is a correlation in WORDSUM scores and DEGREE.
+
